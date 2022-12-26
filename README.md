@@ -36,7 +36,7 @@ Note: All of Rockstar's RAGE engine games use texture dictionaries to store a ma
 
 ![](https://i3.lensdump.com/i/RONlFv.png)
 	
-IV. Extracting & Importing Textures in a Texture Dictionary
+IV. Extracting Textures from a Texture Dictionary
 ---
 1. Inside RDR1 Modding Tools, navigate to `PS3-Xbox360-RAGE_Texture_Editing\Console_Texture_Editor\RAGE_Console_Texture_Editor-v1.5` and run `RAGE Console Texture Editor 1.5.exe`
 
@@ -47,58 +47,28 @@ Note: For me at least, this program is pretty buggy but it's the only one I've f
 3. Depending on which file you are modifiying, you may get anywhere from 1-100+ .dds files in this folder. Find the texture you want to edit here and note the name. Now go back to `RAGE Console Texture Editor`, find that same filename, and note the texture format as noted at the bottom of the program. Now open the texture in  *PhotoShop, Gimp, Paint.net, etc.*
 
 
-V. Editing and saving a .dds file
+V. Editing a .dds file and re-importing it into a texture dictionary
 ----------------------
-_**NOTE: Even if you're familiar with Photshop, please don't skip this section. There is a very specific way you need to save the files that if you fail to do, the game either won't load or the textures will be corrupt.**_
 
-1. For the sake of this guide, I will be editing _hud_sheet_08.dds_.
+1. After importing the texture, make whichever edits you please & export the file as a .dds texture (with the same name), changing the compression according to the attached image below.
 
-2. Make whatever edits you please. 
+![](https://i1.lensdump.com/i/ROfuf0.png) [Source](https://www.se7ensins.com/forums/threads/gta-v-gta-iv-rdr-texture-modding-tutorial-for-ps3-xbox-360.1835853/)
 
-![](https://i2.lensdump.com/i/1QEu97.png)
+2. Return to `RAGE Console Texture Editor` and find the name of the texture file you just edited. Highlight it and select `Import` in the bottom left. Find your recently edited texture and import it.
 
-3. The next step is the reason I made to sure to mention not skimming over this section. Before you save your edited .dds file, open _@peg.xml_ in your mod folder if you created after Step 3 in Section IV. If not, just wherever your .dds file is located.
+3. Save the file and exit this program.
 
-4. Find your texture file name in this file.
-
-![](https://i3.lensdump.com/i/1QEDLr.png)
-
-5. Take note of the format of the texture and whether or not it has the flag "HasAlpha". Hud_sheet_08.dds is DXT3 and HasAlpha, for example.
-
-6. Return to Photoshop. Go to File>Save As and save as Intel Texture Works (.DDS), overwriting your original file.
-
-7. You will see this window. If your texture is DXT3 and HasAlpha, save it with the settings below.
-
-![](https://i.lensdump.com/i/1QENGF.png)
-
-If your texture is DXT1 and had "None" under flags in @peg.xml, save it with these settings.
-
-![](https://lensdump.com/i/1QEfk3)
-
-8. If your texture was DXT1 and you saved it as such, you can skip this step. If your texture was DXT3, continue to step 9.
-
-9. After format, change the value from DXT3 to DXT5. Save the file.
-
-![](https://i2.lensdump.com/i/1QEFl0.png)
-
-VI. Repacking your files and final touches
+VI. Final Steps
 ---
 
-_Don't worry, texture editing is the hardest part of this guide. From now on, everything is as simple as can be._
+You should now have an texture dictionary with modified textures after saving it in the previous step.
 
-1. Drag the interface-backend (or whichever folder you extracted) folder onto _PegConvert.exe_ inside of SR1 Mod Tools. A new .peg_xbox2 file appears in your mod folder with the suffix _pack.
+1. Return to `MagicRDR`. If you didn't close it before, you'll still see the file you extracted in Section III. If not, just search for it again in the top-right corner.
 
-![](https://i2.lensdump.com/i/1QEwNM.png)
+2. Right click the .xsf/.xtd file, and click `Replace`, selecting the file you saved in Section V, Step 3.
 
-2. Delete the _pack suffix.
+3. In MagicRDR, go to *File>Save>Current*. Click yes to both prompts and wait for the process to finish. (After it tells you it's finished, it becomes unresponsive for a few seconds. Just give it a little more time and once it's responding again, close this program.
 
-3. Drag your newly created .peg_xbox2 file with the suffix deleted into the _pegfiles folder_ inside SR1 Mod Tools.
-
-4. Run pack_pegfiles.bat (edit it using the image in Section III, Step 3b if you're packing a different folder.) A new pegfiles.vpp_xbox2 appears in SR1 Mod Tools. Drag this file in your packfiles folder inside your extracted Saints Row folder. Replace.
-
-YOU'RE ALL DONE! Go in game and test out your mod :)
-
-![](https://i3.lensdump.com/i/1QEyiQ.png)
-
+4. In Xenia, open default.xex in your extracted Red Dead Redemption folder to run the game. If it doesn't crash, congratulations, you did it. :)
 	
 
