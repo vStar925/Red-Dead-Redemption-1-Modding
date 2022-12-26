@@ -36,21 +36,16 @@ Note: All of Rockstar's RAGE engine games use texture dictionaries to store a ma
 
 ![](https://i3.lensdump.com/i/RONlFv.png)
 	
-IV. Extracting .peg_xbox2 files
+IV. Extracting & Importing Textures in a Texture Dictionary
 ---
-1. Inside the newly created folder, find a .peg_xbox2 file you want to edit. _For the sake of this guide, I'm editing interface-backend.peg_xbox2._ Copy your file out of this folder and directly into SR1 Mod Tools.
+1. Inside RDR1 Modding Tools, navigate to `PS3-Xbox360-RAGE_Texture_Editing\Console_Texture_Editor\RAGE_Console_Texture_Editor-v1.5` and run `RAGE Console Texture Editor 1.5.exe`
 
-2. Drag your .peg_xbox2 file onto PegConvert.exe. A new folder with the name of the file with the suffix __unpack_ is created. Go ahead and delete that suffix since you're going to need to do it later anyways.
+Note: For me at least, this program is pretty buggy but it's the only one I've found that does what I need it do. Basically no matter what you do, it will throw an error. Just hit continue until the errors are gone.
 
-Your folder should look something like this at this point.
+2. Open your extracted .xtd or .xsf file. Go to `Functions>Export All` and export all the images to a new folder.
 
-![Your folder should look something like this by now.](https://i1.lensdump.com/i/1QEoWb.png)
+3. Depending on which file you are modifiying, you may get anywhere from 1-100+ .dds files in this folder. Find the texture you want to edit here and note the name. Now go back to `RAGE Console Texture Editor`, find that same filename, and note the texture format as noted at the bottom of the program. Now open the texture in  *PhotoShop, Gimp, Paint.net, etc.*
 
-3. Inside of your newly created folder, you will find a variety of .DDS files (if you don't, your .peg_xbox2 was probably empty. Try another file. interface-backend is not, for example). **_Take note of @peg.xml. You will need this file later_**
-
-_**Also at this point, I would recommend copying interface-backend (or whatever file you just extracted) to a separate folder. We'll be editing the folder in this location so we'll still have the original backup in SR1 Mod Tools. Optional, but highly recommended so you don't have to extract everything again if something goes wrong.**_
-
-4. Decide on a .dds file you want to edit. Open it in PhotoShop and continue onto Section V.
 
 V. Editing and saving a .dds file
 ----------------------
