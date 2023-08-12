@@ -1,5 +1,7 @@
 NOTE: This guide only covers the Xbox 360 version of the game.
 
+NOTE2: A recent update to MagicRDR allows directly editing texture dictionaries. AKA you no longer need to use RAGE Console Texture Editor. I will update the guide in the future.
+
 # Installing & Creating Mods
 I. Everything You'll Need
 ------------------
